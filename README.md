@@ -31,8 +31,8 @@ src                          # Your application's source files
 gulp.task('tpl', ['clean-tpl'], function() {
   return gulp.src('./src/tpl/hbs/**/*')
     .pipe(handlebars_robot({
-      root: './src/tpl/',
-      ext: 'html'
+      root: './src/tpl/', //the root that contain json directory and layout directory
+      ext: '.html' //output file extention
     }))
     .pipe(gulp.dest('./build/tpl/'));
 });
