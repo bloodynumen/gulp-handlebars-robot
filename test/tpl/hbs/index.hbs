@@ -1,0 +1,26 @@
+{{#extend "layout"}}
+    {{#content "head" model="append"}}
+    <link rel="stylesheet" href="/static/css/###index.css###" />
+    {{/content}}
+    {{#content "main"}}
+    <div class="section-banner">
+      <div class="mod-userinfo">
+        <div id="tabs_login" class="pass_login_box">
+          <ul class="login-tab">
+            <li class="tab-item tab-item-left tab-selected">
+              <a href="#" onclick="return false;" hidefocus="true">普通登录</a>
+            </li>
+            <li class="tab-item tab-item-right">
+              <a href="#" onclick="return false;" hidefocus="true">手机登录</a>
+            </li>
+          </ul>
+          <p class="regist-tip">如果您还没有百度帐号，<a href="https://passport.baidu.com/v2/?reg&amp;regType=1&amp;tpl=mn&amp;u=http%3A%2F%2Fwww.baidu.com%2F" target="_blank">请先注册</a></p>
+          <div id="music_pass_login_form" class="tang-pass-login"></div>
+        </div>
+      </div>
+    </div>
+    {{/content}}
+    {{#content "foot"}}
+    <script type="text/javascript" src="/static/js/###index.js###"></script>
+    {{/content}}
+{{/extend}}

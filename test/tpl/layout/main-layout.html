@@ -1,0 +1,66 @@
+<!Doctype html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <title>{{#block "title"}}百度音频广告联盟平台{{/block}}</title>
+    <link rel="stylesheet" href="/static/css/third/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/css/###base.css###" />
+    <?php if(ENVIRONMENT == 'development'): ?>
+    <script type="text/javascript" src="/static/js/cube.js" ></script>
+    <?php else: ?>
+    <script type="text/javascript" src="/static/js/cube_nj.js" ></script>
+    <?php endif; ?>
+    <script type="text/javascript" src="/static/js/third/jquery.min.js" ></script>
+    <script type="text/javascript" src="/static/js/third/bootstrap.min.js"></script>
+    {{#block "head"}}
+    {{/block}}
+  </head>
+  <body>
+    <div id="page-top">
+    {{#block "header"}}
+    <div class="topbar">
+      <header class="header">
+        <h1><span class="line"></span><a class="logo" href="/">音频广告联盟平台</a></h1>
+        <nav class="nav">
+          <ul>
+            <li class="<?php if (isset($channel) && $channel == 'app'): ?>active<?php endif; ?>"><a href="<?php if(isset($developer_info)): ?>/developer/<?php echo $developer_info['id']; ?>/app/list<?php else: ?>#<?php endif; ?>">应用管理</a></li>
+            <?php if(isset($have_app) && $have_app): ?>
+            <li class="<?php if (isset($channel) && $channel == 'stats'): ?>active<?php endif; ?>"><a href="<?php if(isset($developer_info)): ?>/developer/<?php echo $developer_info['id']; ?>/stats<?php else: ?>#<?php endif; ?>">数据中心</a></li>
+            <?php endif; ?>
+            <li class="<?php if (isset($channel) && $channel == 'account'): ?>active<?php endif; ?>"><a href="<?php if(isset($developer_info)): ?>/developer/<?php echo $developer_info['id']; ?><?php else: ?>#<?php endif; ?>">帐号管理</a></li>
+            <li class="<?php if (isset($channel) && $channel == 'sdk'): ?>active<?php endif; ?>"><a href="<?php if(isset($developer_info)): ?>/sdk/<?php else: ?>#<?php endif; ?>">SDK下载</a></li>
+          </ul>
+        </nav>
+        <section class="user-section user-login-section">
+          <a id="pass-login" href="/">登陆</a>
+          <span class="space">|</span>
+          <a class="signup" target="_blank" href="http://passport.baidu.com/v2/?reg&regType=1&tpl=music&u=http%3A%2F%2Fy.baidu.com%2F">注册</a>
+        </section>
+        <section class="user-section user-info-section">
+          <span id="pass-displayname"></span>
+          <span class="space">|</span>
+          <a id="pass-logout" href="#">退出</a>
+        </section>
+      </header>
+    </div>
+    {{/block}}
+    </div>
+
+    <div id="wrapper">
+      <div class="wrap">
+        {{#block "main"}}
+        {{/block}}
+      </div>
+    </div>
+
+    <div id="page-bottom">
+      <footer class="footer">
+        <p>&copy;2015 Baidu 使用百度前必读</p>
+        <p class="us"><a href="http://music.baidu.com/doc/about" target="_blank">关于我们</a><span class="space">|</span><a href="http://music.baidu.com/doc/contact" target="_blank">联系我们</a></p>
+      </footer>
+    </div>
+    <script type="text/javascript" src="/static/js/###pass.js###" ></script>
+    {{#block "foot"}}
+    {{/block}}
+  </body>
+</html>

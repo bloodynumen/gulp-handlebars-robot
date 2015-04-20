@@ -3,7 +3,7 @@
 Install gulp-handlebars-robot as a development dependency:
 
 ```shell
-    npm install --save-dev gulp-handlebars-robot
+npm install --save-dev gulp-handlebars-robot
 ```
 
 ## Compiling templates
@@ -28,12 +28,12 @@ src                          # Your application's source files
 ## gulpfile.js
 
 ``` javascript
-    gulp.task('tpl', ['clean-tpl'], function() {
-      return gulp.src('./src/tpl/hbs/**/*')
-        .pipe(handlebars_robot({
-          root: './src/tpl/',
-          ext: 'html'
-        }))
-        .pipe(gulp.dest('./build/tpl/'));
-    });
+gulp.task('tpl', ['clean-tpl'], function() {
+  return gulp.src('./src/tpl/hbs/**/*')
+    .pipe(handlebars_robot({
+      root: './src/tpl/',
+      ext: 'html'
+    }))
+    .pipe(gulp.dest('./build/tpl/'));
+});
 ```
