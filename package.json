@@ -49,17 +49,10 @@
   },
   "homepage": "https://github.com/bloodynumen/gulp-handlebars-robot",
   "_id": "gulp-handlebars-robot@1.0.0",
-  "_shasum": "02b45067e99a21b75ddadfd1102a27772b45f2c3",
   "_from": "gulp-handlebars-robot@",
   "_npmVersion": "1.4.28",
   "_npmUser": {
     "name": "bloodynumen",
     "email": "bloodynumen@gmail.com"
-  },
-  "dist": {
-    "shasum": "02b45067e99a21b75ddadfd1102a27772b45f2c3",
-    "tarball": "http://registry.npmjs.org/gulp-handlebars-robot/-/gulp-handlebars-robot-1.0.0.tgz"
-  },
-  "directories": {},
-  "_resolved": "http://registry.npmjs.org/gulp-handlebars-robot/-/gulp-handlebars-robot-1.0.0.tgz"
+  }
 }
