@@ -1,0 +1,65 @@
+{
+  "name": "gulp-handlebars-robot",
+  "version": "1.0.0",
+  "description": "handlebars to html, auto load layout and json",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bloodynumen/gulp-handlebars-robot.git"
+  },
+  "author": {
+    "name": "Sun Huai",
+    "email": "bloodynumen@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "Sun Huai",
+      "email": "bloodynumen@gmail.com"
+    }
+  ],
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulpplugin",
+    "handlebars",
+    "handlebars-layout",
+    "template",
+    "auto",
+    "json",
+    "static"
+  ],
+  "dependencies": {
+    "gulp-util": "^3.0.0",
+    "handlebars": "^1.3.0",
+    "handlebars-layouts": "^1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "gitHead": "b73361fc84aa54a096d0a24c3fc23598ade27e29",
+  "bugs": {
+    "url": "https://github.com/bloodynumen/gulp-handlebars-robot/issues"
+  },
+  "homepage": "https://github.com/bloodynumen/gulp-handlebars-robot",
+  "_id": "gulp-handlebars-robot@1.0.0",
+  "_shasum": "02b45067e99a21b75ddadfd1102a27772b45f2c3",
+  "_from": "gulp-handlebars-robot@",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "bloodynumen",
+    "email": "bloodynumen@gmail.com"
+  },
+  "dist": {
+    "shasum": "02b45067e99a21b75ddadfd1102a27772b45f2c3",
+    "tarball": "http://registry.npmjs.org/gulp-handlebars-robot/-/gulp-handlebars-robot-1.0.0.tgz"
+  },
+  "directories": {},
+  "_resolved": "http://registry.npmjs.org/gulp-handlebars-robot/-/gulp-handlebars-robot-1.0.0.tgz"
+}
