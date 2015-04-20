@@ -11,16 +11,25 @@ module.exports = function (opt) {
   var rootPath = path.join(__dirname, '/../../', opt.root);
   var jsonDir = path.join(rootPath, '/json/');
   var layoutDir = path.join(rootPath, '/layout/');
-  var defaultLayout = path.join(layoutDir, 'main-layout.html');
+  var defaultLayout = path.join(layoutDir, 'main-layout.hbs');
+  var ext = '.html';
+  if (opt.ext)
+  {
+    ext = opt.ext;
+  }
 
-  function replaceExtension(path) {
-    return gutil.replaceExtension(path, '.json');
+  function replaceExtension(path, ext) {
+    if (typeof ext === 'undefined') {
+      ext = '.json';
+    }
+    return gutil.replaceExtension(path, ext);
   }
   function transform(file, enc, cb) {
     if (file.isNull()) return cb(null, file);
     if (file.isStream()) return cb(new PluginError('gulp-handlebars-robot', 'Streaming not supported'));
     var str = file.contents.toString('utf8');
     var jsonFile = replaceExtension(path.join(jsonDir, file.relative));
+    var dest = replaceExtension(file.path, ext);
     var data = {};
     if (fs.existsSync(jsonFile)) {
       data = require(jsonFile);
@@ -40,7 +49,7 @@ module.exports = function (opt) {
       var template = handlebars.compile(str);
       tpl = template(data);
       file.contents = new Buffer(tpl);
-
+      file.path = dest;
       return cb(null, file);
     } catch (err) {
       return cb(new PluginError('gulp-handlebars-robot', err));
