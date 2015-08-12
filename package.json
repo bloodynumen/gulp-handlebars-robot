@@ -1,7 +1,7 @@
 {
   "name": "gulp-handlebars-robot",
-  "version": "1.0.5",
-  "description": "handlebars to html, auto load layout and json",
+  "version": "1.0.6",
+  "description": "handlebars to html, auto load layout and json,batch process",
   "license": "MIT",
   "repository": {
     "type": "git",
